@@ -92,6 +92,10 @@ You should always know what you are doing when using these methods. Errors may v
 
 ## Installation
 Requires ARC.
+### CocoaPods
+```ruby
+pod 'Nilus'
+```
 ### Manual
 Copy the files in the `Classes` directory into your project and import `Nilus.h`.
 
