@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44C1CE8E1879DA2500399C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C1CE8D1879DA2500399C07 /* Foundation.framework */; };
+		44C1CE901879DA2500399C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C1CE8F1879DA2500399C07 /* CoreGraphics.framework */; };
+		44C1CE921879DA2500399C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C1CE911879DA2500399C07 /* UIKit.framework */; };
+		44C1CE9A1879DA2500399C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C1CE991879DA2500399C07 /* main.m */; };
+		44C1CEB01879DA2500399C07 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C1CEAF1879DA2500399C07 /* XCTest.framework */; };
+		44C1CEB11879DA2500399C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C1CE8D1879DA2500399C07 /* Foundation.framework */; };
+		44C1CECB1879DACD00399C07 /* NSArray+Nilus.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C1CEC81879DACD00399C07 /* NSArray+Nilus.m */; };
+		44C1CECC1879DACD00399C07 /* NSMutableArray+Nilus.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C1CECA1879DACD00399C07 /* NSMutableArray+Nilus.m */; };
+		44C1CECE1879DADA00399C07 /* NilusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C1CECD1879DADA00399C07 /* NilusTests.m */; };
+		44C1CED11879DD7B00399C07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C1CED01879DD7B00399C07 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44C1CEB31879DA2500399C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C1CE821879DA2500399C07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44C1CE891879DA2500399C07;
+			remoteInfo = Nilus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44C1CE8A1879DA2500399C07 /* Nilus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nilus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C1CE8D1879DA2500399C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44C1CE8F1879DA2500399C07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44C1CE911879DA2500399C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44C1CE991879DA2500399C07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44C1CE9B1879DA2500399C07 /* Nilus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nilus-Prefix.pch"; sourceTree = "<group>"; };
+		44C1CEAE1879DA2500399C07 /* NilusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NilusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C1CEAF1879DA2500399C07 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		44C1CEB71879DA2500399C07 /* NilusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NilusTests-Info.plist"; sourceTree = "<group>"; };
+		44C1CEC61879DACD00399C07 /* Nilus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Nilus.h; path = Classes/Nilus.h; sourceTree = "<group>"; };
+		44C1CEC71879DACD00399C07 /* NSArray+Nilus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Nilus.h"; path = "Classes/NSArray+Nilus.h"; sourceTree = "<group>"; };
+		44C1CEC81879DACD00399C07 /* NSArray+Nilus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Nilus.m"; path = "Classes/NSArray+Nilus.m"; sourceTree = "<group>"; };
+		44C1CEC91879DACD00399C07 /* NSMutableArray+Nilus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Nilus.h"; path = "Classes/NSMutableArray+Nilus.h"; sourceTree = "<group>"; };
+		44C1CECA1879DACD00399C07 /* NSMutableArray+Nilus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Nilus.m"; path = "Classes/NSMutableArray+Nilus.m"; sourceTree = "<group>"; };
+		44C1CECD1879DADA00399C07 /* NilusTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NilusTests.m; sourceTree = "<group>"; };
+		44C1CECF1879DD7B00399C07 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		44C1CED01879DD7B00399C07 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		44C1CED41879DE6000399C07 /* Nilus-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Nilus-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44C1CE871879DA2500399C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C1CE901879DA2500399C07 /* CoreGraphics.framework in Frameworks */,
+				44C1CE921879DA2500399C07 /* UIKit.framework in Frameworks */,
+				44C1CE8E1879DA2500399C07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C1CEAB1879DA2500399C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C1CEB01879DA2500399C07 /* XCTest.framework in Frameworks */,
+				44C1CEB11879DA2500399C07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44C1CE811879DA2500399C07 = {
+			isa = PBXGroup;
+			children = (
+				44C1CEC51879DAC100399C07 /* Classes */,
+				44C1CE931879DA2500399C07 /* Nilus */,
+				44C1CEB51879DA2500399C07 /* NilusTests */,
+				44C1CE8C1879DA2500399C07 /* Frameworks */,
+				44C1CE8B1879DA2500399C07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44C1CE8B1879DA2500399C07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CE8A1879DA2500399C07 /* Nilus.app */,
+				44C1CEAE1879DA2500399C07 /* NilusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44C1CE8C1879DA2500399C07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CE8D1879DA2500399C07 /* Foundation.framework */,
+				44C1CE8F1879DA2500399C07 /* CoreGraphics.framework */,
+				44C1CE911879DA2500399C07 /* UIKit.framework */,
+				44C1CEAF1879DA2500399C07 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44C1CE931879DA2500399C07 /* Nilus */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CECF1879DD7B00399C07 /* AppDelegate.h */,
+				44C1CED01879DD7B00399C07 /* AppDelegate.m */,
+				44C1CE941879DA2500399C07 /* Supporting Files */,
+			);
+			path = Nilus;
+			sourceTree = "<group>";
+		};
+		44C1CE941879DA2500399C07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CED41879DE6000399C07 /* Nilus-Info.plist */,
+				44C1CE991879DA2500399C07 /* main.m */,
+				44C1CE9B1879DA2500399C07 /* Nilus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44C1CEB51879DA2500399C07 /* NilusTests */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CECD1879DADA00399C07 /* NilusTests.m */,
+				44C1CEB61879DA2500399C07 /* Supporting Files */,
+			);
+			path = NilusTests;
+			sourceTree = "<group>";
+		};
+		44C1CEB61879DA2500399C07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CEB71879DA2500399C07 /* NilusTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44C1CEC51879DAC100399C07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				44C1CEC61879DACD00399C07 /* Nilus.h */,
+				44C1CEC71879DACD00399C07 /* NSArray+Nilus.h */,
+				44C1CEC81879DACD00399C07 /* NSArray+Nilus.m */,
+				44C1CEC91879DACD00399C07 /* NSMutableArray+Nilus.h */,
+				44C1CECA1879DACD00399C07 /* NSMutableArray+Nilus.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44C1CE891879DA2500399C07 /* Nilus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44C1CEBF1879DA2500399C07 /* Build configuration list for PBXNativeTarget "Nilus" */;
+			buildPhases = (
+				44C1CE861879DA2500399C07 /* Sources */,
+				44C1CE871879DA2500399C07 /* Frameworks */,
+				44C1CE881879DA2500399C07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nilus;
+			productName = Nilus;
+			productReference = 44C1CE8A1879DA2500399C07 /* Nilus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44C1CEAD1879DA2500399C07 /* NilusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44C1CEC21879DA2500399C07 /* Build configuration list for PBXNativeTarget "NilusTests" */;
+			buildPhases = (
+				44C1CEAA1879DA2500399C07 /* Sources */,
+				44C1CEAB1879DA2500399C07 /* Frameworks */,
+				44C1CEAC1879DA2500399C07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44C1CEB41879DA2500399C07 /* PBXTargetDependency */,
+			);
+			name = NilusTests;
+			productName = NilusTests;
+			productReference = 44C1CEAE1879DA2500399C07 /* NilusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44C1CE821879DA2500399C07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Masashi Beheim";
+				TargetAttributes = {
+					44C1CEAD1879DA2500399C07 = {
+						TestTargetID = 44C1CE891879DA2500399C07;
+					};
+				};
+			};
+			buildConfigurationList = 44C1CE851879DA2500399C07 /* Build configuration list for PBXProject "Nilus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44C1CE811879DA2500399C07;
+			productRefGroup = 44C1CE8B1879DA2500399C07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44C1CE891879DA2500399C07 /* Nilus */,
+				44C1CEAD1879DA2500399C07 /* NilusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44C1CE881879DA2500399C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C1CEAC1879DA2500399C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44C1CE861879DA2500399C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C1CED11879DD7B00399C07 /* AppDelegate.m in Sources */,
+				44C1CECC1879DACD00399C07 /* NSMutableArray+Nilus.m in Sources */,
+				44C1CE9A1879DA2500399C07 /* main.m in Sources */,
+				44C1CECB1879DACD00399C07 /* NSArray+Nilus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C1CEAA1879DA2500399C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C1CECE1879DADA00399C07 /* NilusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44C1CEB41879DA2500399C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44C1CE891879DA2500399C07 /* Nilus */;
+			targetProxy = 44C1CEB31879DA2500399C07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		44C1CEBD1879DA2500399C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44C1CEBE1879DA2500399C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44C1CEC01879DA2500399C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nilus/Nilus-Prefix.pch";
+				INFOPLIST_FILE = "Nilus/Nilus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		44C1CEC11879DA2500399C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nilus/Nilus-Prefix.pch";
+				INFOPLIST_FILE = "Nilus/Nilus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		44C1CEC31879DA2500399C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nilus.app/Nilus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nilus/Nilus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NilusTests/NilusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		44C1CEC41879DA2500399C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nilus.app/Nilus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nilus/Nilus-Prefix.pch";
+				INFOPLIST_FILE = "NilusTests/NilusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44C1CE851879DA2500399C07 /* Build configuration list for PBXProject "Nilus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C1CEBD1879DA2500399C07 /* Debug */,
+				44C1CEBE1879DA2500399C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44C1CEBF1879DA2500399C07 /* Build configuration list for PBXNativeTarget "Nilus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C1CEC01879DA2500399C07 /* Debug */,
+				44C1CEC11879DA2500399C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44C1CEC21879DA2500399C07 /* Build configuration list for PBXNativeTarget "NilusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C1CEC31879DA2500399C07 /* Debug */,
+				44C1CEC41879DA2500399C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44C1CE821879DA2500399C07 /* Project object */;
+}
