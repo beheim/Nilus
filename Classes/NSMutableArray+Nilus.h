@@ -13,59 +13,12 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "NilusProtocols.h"
 
-@interface NSMutableArray (Nilus)
-
-/**
- * Inserts a given object at the end of the array if the object is not nil. If the object is nil the method has no effect.
- * @param anObject The object to add to the end of the array's content.
- */
-- (void)addObjectNil:(id)anObject;
-
-/**
- * Inserts a given object at the end of the array if the object is not nil. If the object is nil [NSNull null] will be inserted.
- * @param anObject The object to add to the end of the array's content.
- */
-- (void)addObjectNull:(id)anObject;
-
-/**
- * Inserts a given object into the array's contents at a given index if the object is not nil. If the object is nil the method has no effect.
- *
- * If index is already occupied, the objects at index and beyond are shifted by adding 1 to their indices to make room.
- *
- * @exception NSRangeException Raises an NSRangeException if index is greater than the number of elements in the array.
- * @param anObject The object to add to the end of the array's content.
- * @param index The index in the array at which to insert anObject. This value must not be greater than the count of elements in the array.
- */
-- (void)insertObjectNil:(id)anObject atIndex:(NSUInteger)index;
-
-/**
- * Inserts a given object into the array's contents at a given index if the object is not nil. If the object is nil [NSNull null] will be inserted.
- *
- * If index is already occupied, the objects at index and beyond are shifted by adding 1 to their indices to make room.
- *
- * @exception NSRangeException Raises an NSRangeException if index is greater than the number of elements in the array.
- * @param anObject The object to add to the end of the array's content.
- * @param index The index in the array at which to insert anObject. This value must not be greater than the count of elements in the array.
- */
-- (void)insertObjectNull:(id)anObject atIndex:(NSUInteger)index;
-
-/**
- * Replaces the object at index with anObject. If anObject is nil the method has no effect.
- *
- * @exception NSRangeException Raises an NSRangeException if index is beyond the end of the array.
- * @param index The index of the object to be replaced. This value must not exceed the bounds of the array.
- * @param anObject The object with which to replace the object at index index in the array.
- */
-- (void)replaceObjectAtIndex:(NSUInteger)index withObjectNil:(id)anObject;
-
-/**
- * Replaces the object at index with anObject. If the object is nil the object at index will be replaced with [NSNull null].
- *
- * @exception NSRangeException Raises an NSRangeException if index is beyond the end of the array.
- * @param index The index of the object to be replaced. This value must not exceed the bounds of the array.
- * @param anObject The object with which to replace the object at index index in the array.
- */
-- (void)replaceObjectAtIndex:(NSUInteger)index withObjectNull:(id)anObject;
+@interface NSMutableArray (Nilus) <
+NilusAddObject,
+NilusInsertObjectAtIndex,
+NilusReplaceObjectAtIndexWithObject
+>
 
 @end

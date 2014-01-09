@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44572EE0187F450800DA381A /* NilusProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NilusProtocols.h; path = Classes/NilusProtocols.h; sourceTree = "<group>"; };
 		44C1CE8A1879DA2500399C07 /* Nilus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nilus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C1CE8D1879DA2500399C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44C1CE8F1879DA2500399C07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				44C1CEC61879DACD00399C07 /* Nilus.h */,
+				44572EE0187F450800DA381A /* NilusProtocols.h */,
 				44C1CEC71879DACD00399C07 /* NSArray+Nilus.h */,
 				44C1CEC81879DACD00399C07 /* NSArray+Nilus.m */,
 				44C1CEC91879DACD00399C07 /* NSMutableArray+Nilus.h */,
