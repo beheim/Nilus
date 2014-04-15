@@ -14,3 +14,5 @@
 
 #import "NSArray+Nilus.h"
 #import "NSMutableArray+Nilus.h"
+#import "NSDictionary+Nilus.h"
+#import "NSMutableDictionary+Nilus.h"

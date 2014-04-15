@@ -15,8 +15,6 @@
 #import <Foundation/Foundation.h>
 #import "NilusProtocols.h"
 
-@interface NSMutableArray (Nilus) <NilusAddObject,
-                                   NilusInsertObjectAtIndex,
-                                   NilusReplaceObjectAtIndexWithObject>
+@interface NSMutableDictionary (Nilus) <NilusSetObjectForKey>
 
 @end

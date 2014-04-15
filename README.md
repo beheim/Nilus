@@ -1,6 +1,6 @@
 Nilus
 =========
-A category on NSArray and NSMutableArray for handling nil objects.
+A category on NS(Mutable)Array and NS(Mutable)Dictionary for handling nil objects.
 
 ## Motivation
 Consider the following objects defined somewhere. They could be anything including nil.
@@ -50,14 +50,14 @@ Also, it is now easy to skip nil-objects or insert `[NSNull null]`s for them.
   [mutableArray addObjectNull:obj] // [NSNull null] will be added if obj is nil
 ```
 
-More methods under Usage.
+Same applies to dictionaries. All methods under Usage.
 
 ## Usage
 All methods perform nil-checking before passing the objects down to the default implementations. Check the `.h` files for detailed documentation, which is also Xcode quick help compliant.
  - In case the object supplied is nil:
   - Using methods suffixed with `Nil` will skip the object.
   - Using methods suffixed with `Null` will transform the object into `[NSNull null]`.
- - All functions return a NEW array. They will never return nil, but an empty array.
+ - All functions return a NEW array/dictionary. They will never return nil, but an empty array/dictionary.
  
 Following functions and methods are suffixed with `Nil` or `Null`.
 ```objective-c
@@ -86,18 +86,34 @@ Following functions and methods are suffixed with `Nil` or `Null`.
   - (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject      // Default
   - (void)replaceObjectAtIndex:(NSUInteger)index withObjectNil:(id)anObject   // Nilus
   - (void)replaceObjectAtIndex:(NSUInteger)index withObjectNull:(id)anObject  // Nilus
+  
+  // NSDictionary
+  + (instancetype)dictionaryWithObject:(id)anObject forKey:(id<NSCopying>)aKey     // Default
+  + (instancetype)dictionaryWithObjectNil:(id)anObject forKey:(id<NSCopying>)aKey  // Nilus
+  + (instancetype)dictionaryWithObjectNull:(id)anObject forKey:(id<NSCopying>)aKey // Nilus
+  
+  + (instancetype)dictionaryWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)count     // Default
+  + (instancetype)dictionaryWithObjectsNil:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)count  // Nilus
+  + (instancetype)dictionaryWithObjectsNull:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)count // Nilus
+  
+  // NSMutableDictionary
+  - (void)setObject:(id)anObject forKey:(id < NSCopying >)aKey     // Default
+  - (void)setObjectNil:(id)anObject forKey:(id < NSCopying >)aKey  // Nilus
+  - (void)setObjectNull:(id)anObject forKey:(id < NSCopying >)aKey // Nilus
+
 ```
 
 You should always know what you are doing when using these methods. Errors may vanish silently...
 
 ## Installation
-Requires ARC.
+Requires ARC. Just import `Nilus.h` after installing via pods or manually.
 ### CocoaPods
 ```ruby
 pod 'Nilus'
 ```
+
 ### Manual
-Copy the files in the `Classes` directory into your project and import `Nilus.h`.
+Copy the files in the `Classes` directory into your project.
 
 ## Tests
 Tests are under `NilusTests/NilusTests.m`.

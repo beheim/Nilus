@@ -33,19 +33,15 @@
 
 /**
  * Inserts a given object at a given index. If the object is nil the method has no effect.
- *
- * @exception NSRangeException Raises an NSRangeException if index is greater than the number of elements in the underlying data structure.
  * @param anObject The object to add.
- * @param index The index in the underlying data structure at which to insert anObject. This value must not be greater than the count of elements in the underlying data structure.
+ * @param index The index in the underlying data structure at which to insert anObject. Raises an NSRangeException if index is greater than the number of elements in the underlying data structure.
  */
 - (void)insertObjectNil:(id)anObject atIndex:(NSUInteger)index;
 
 /**
  * Inserts a given object at a given index. If the object is nil, [NSNull null] will be inserted.
- *
- * @exception NSRangeException Raises an NSRangeException if index is greater than the number of elements in the underlying data structure.
  * @param anObject The object to add.
- * @param index The index in the underlying data structure at which to insert anObject. This value must not be greater than the count of elements in the underlying data structure.
+ * @param index The index in the underlying data structure at which to insert anObject. Raises an NSRangeException if index is greater than the number of elements in the underlying data structure.
  */
 - (void)insertObjectNull:(id)anObject atIndex:(NSUInteger)index;
 
@@ -55,20 +51,34 @@
 
 /**
  * Replaces the object at index with anObject. If anObject is nil the method has no effect.
- *
- * @exception NSRangeException Raises an NSRangeException if index is beyond the end of the underlying data structure.
- * @param index The index of the object to be replaced. This value must not exceed the bounds of the underlying data structure.
+ * @param index The index of the object to be replaced. Raises an NSRangeException if index is beyond the end of the underlying data structure.
  * @param anObject The object with which to replace the object at index index in the underlying data structure.
  */
 - (void)replaceObjectAtIndex:(NSUInteger)index withObjectNil:(id)anObject;
 
 /**
  * Replaces the object at index with anObject. If the object is nil the object at index will be replaced with [NSNull null].
- *
- * @exception NSRangeException Raises an NSRangeException if index is beyond the end of the underlying data structure.
- * @param index The index of the object to be replaced. This value must not exceed the bounds of the underlying data structure.
+ * @param index The index of the object to be replaced. Raises an NSRangeException if index is beyond the end of the underlying data structure.
  * @param anObject The object with which to replace the object at index index in the underlying data structure.
  */
 - (void)replaceObjectAtIndex:(NSUInteger)index withObjectNull:(id)anObject;
+
+@end
+
+@protocol NilusSetObjectForKey <NSObject>
+
+/**
+ * Adds a given key-value pair to the dictionary. If anObject is nil the method has no effect.
+ * @param anObject The value for aKey. A strong reference to the object is maintained by the dictionary.
+ * @param aKey The key for value. The key is copied (using copyWithZone:; keys must conform to the NSCopying protocol). Raises an NSInvalidArgumentException if aKey is nil. If aKey already exists in the dictionary anObject takes its place.
+ */
+- (void)setObjectNil:(id)anObject forKey:(id < NSCopying >)aKey;
+
+/**
+ * Adds a given key-value pair to the dictionary. If anObject is nil it will be replaced with [NSNull null].
+ * @param anObject The value for aKey. A strong reference to the object is maintained by the dictionary.
+ * @param The key for value. The key is copied (using copyWithZone:; keys must conform to the NSCopying protocol). Raises an NSInvalidArgumentException if aKey is nil. If aKey already exists in the dictionary anObject or [NSNull null] takes its place.
+ */
+- (void)setObjectNull:(id)anObject forKey:(id < NSCopying >)aKey;
 
 @end

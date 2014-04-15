@@ -16,66 +16,75 @@
 
 @implementation NSArray (Nilus)
 
+#pragma mark - + (instancetype)arrayWithObject:(id)anObject
+
 + (instancetype)arrayWithObjectNil:(id)anObject
 {
-    if (anObject) {
-        return [NSArray arrayWithObject:anObject];
-    }
-    return [NSArray array];
+    return [self arrayWithObject:anObject isNull:NO];
 }
 
 + (instancetype)arrayWithObjectNull:(id)anObject
 {
+    return [self arrayWithObject:anObject isNull:YES];
+}
+
++ (instancetype)arrayWithObject:(id)anObject isNull:(BOOL)isNull
+{
     if (anObject) {
         return [NSArray arrayWithObject:anObject];
+    } else if (isNull) {
+        return [NSArray arrayWithObject:[NSNull null]];
     }
-    return [NSArray arrayWithObject:[NSNull null]];
+    return [NSArray array];
 }
+
+#pragma mark - + (instancetype)arrayWithObjects:(const id [])objects count:(NSUInteger)count
 
 + (instancetype)arrayWithObjectsNil:(const id[])objects size:(size_t)size
 {
-    NSUInteger count = size / sizeof(id);
-    NSMutableArray *mutableResult = [NSMutableArray array];
-    for (NSUInteger i = 0; i < count; i++) {
-        id obj = objects[i];
-        if (obj) {
-            [mutableResult addObject:obj];
-        }
-    }
-    NSArray *result = [mutableResult copy];
-    return result;
+    return [self arrayWithObjects:objects size:size isNull:NO];
 }
 
 + (instancetype)arrayWithObjectsNull:(const id[])objects size:(size_t)size
 {
+    return [self arrayWithObjects:objects size:size isNull:YES];
+}
+
++ (instancetype)arrayWithObjects:(const id[])objects size:(size_t)size isNull:(BOOL)isNull
+{
     NSUInteger count = size / sizeof(id);
     NSMutableArray *mutableResult = [NSMutableArray array];
     for (NSUInteger i = 0; i < count; i++) {
-        id obj = objects[i];
-        if (obj) {
-            [mutableResult addObject:obj];
-        } else {
+        id object = objects[i];
+        if (object) {
+            [mutableResult addObject:object];
+        } else if (isNull) {
             [mutableResult addObject:[NSNull null]];
         }
     }
-    NSArray *result = [mutableResult copy];
-    return result;
+    return [mutableResult copy];
 }
+
+#pragma mark - - (NSArray *)arrayByAddingObject:(id)anObject
 
 - (NSArray *)arrayByAddingObjectNil:(id)anObject
 {
-    if (anObject) {
-        return [self arrayByAddingObject:anObject];
-    }
-    return [self copy];
+    return [self arrayByAddingObject:anObject isNull:NO];
 }
 
 - (NSArray *)arrayByAddingObjectNull:(id)anObject
 {
+    return [self arrayByAddingObject:anObject isNull:YES];
+}
+
+- (NSArray *)arrayByAddingObject:(id)anObject isNull:(BOOL)isNull
+{
     if (anObject) {
         return [self arrayByAddingObject:anObject];
+    } else if (isNull) {
+        return [self arrayByAddingObject:[NSNull null]];
     }
-    return [self arrayByAddingObject:[NSNull null]];
+    return [self copy];
 }
 
 @end

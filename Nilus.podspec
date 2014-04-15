@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Nilus"
-  s.version      = "1.0.0"
-  s.summary      = "A category on NSArray and NSMutableArray for handling nil objects."
+  s.version      = "1.1.0"
+  s.summary      = "A category on NS(Mutable)Array and NS(Mutable)Dictionary for handling nil objects."
   s.homepage     = "https://github.com/beheim/Nilus"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Masashi Beheim" => "github@beheim.eu" }

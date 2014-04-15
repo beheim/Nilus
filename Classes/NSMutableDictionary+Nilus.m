@@ -12,11 +12,29 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NilusProtocols.h"
+#import "NSMutableDictionary+Nilus.h"
 
-@interface NSMutableArray (Nilus) <NilusAddObject,
-                                   NilusInsertObjectAtIndex,
-                                   NilusReplaceObjectAtIndexWithObject>
+@implementation NSMutableDictionary (Nilus)
+
+#pragma mark - - (void)setObject:(id)anObject forKey:(id < NSCopying >)aKey
+
+- (void)setObjectNil:(id)anObject forKey:(id<NSCopying>)aKey
+{
+    [self setObject:anObject forKey:aKey isNull:NO];
+}
+
+- (void)setObjectNull:(id)anObject forKey:(id<NSCopying>)aKey
+{
+    [self setObject:anObject forKey:aKey isNull:YES];
+}
+
+- (void)setObject:(id)anObject forKey:(id<NSCopying>)aKey isNull:(BOOL)isNull
+{
+    if (anObject) {
+        [self setObject:anObject forKey:aKey];
+    } else if (isNull) {
+        [self setObject:[NSNull null] forKey:aKey];
+    }
+}
 
 @end
